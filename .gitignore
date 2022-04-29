@@ -1,23 +1,34 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
-# dependencies
-/node_modules
-/.pnp
-.pnp.js
-
-# testing
-/coverage
-
-# production
-/build
-
-# misc
 .DS_Store
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
+.idea
+.isomorphic
+.node-diamond-client-cache
+.project
+.settings
+.npminstall.done
+.history
+app/proxy
+app/proxy_class_map.js
+app/proxy-class
+app/proxy-enums
+assembly
+assembly/
+config/serverEnv
+config/env
+debug
+logs
+mocks_data
+mocks_data/proxy/**/__*
+node_modules
+npm-debug.log
+run
+track
+.run/
+!.run/isomorphic
+public/.DS_Store
+package-lock.json
+mock/.DS_Store
+yarn.lock
+*.log
+coverage
+out/
+build
