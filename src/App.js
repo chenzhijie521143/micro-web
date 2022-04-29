@@ -1,9 +1,10 @@
 import React from 'react';
+import styles from './index.less';
 
 function App() {
   return (
-    <div className="App">
-      23sdfsdfdfsadfsdf
+    <div className={styles.app}>
+      web
     </div>
   );
 }
