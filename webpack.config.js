@@ -9,16 +9,8 @@ module.exports = {
     path: path.resolve(__dirname, 'build'),
     filename: '[name].js',
     chunkFilename: '[name].bundle.js',
-    // publicPath: '/',
+    publicPath: '/',
   },
-  // output: {
-  //   path: path.resolve(__dirname, 'build'),
-  //   filename: 'micro_1',
-  //   library: 'micro_1',
-  //   libraryTarget: 'umd',
-  //   umdNamedDefine: true,
-  //   publicPath: '/static/micro-web/'
-  // },
   module: {
     rules: [
       {

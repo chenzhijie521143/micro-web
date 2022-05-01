@@ -1,17 +1,16 @@
 import React from 'react'
 import { BrowserRouter, Routes, Route, Link, Navigate } from 'react-router-dom';
-import App1 from './routes/app1';
-import App2 from './routes/app2';
+import Content from './routes';
 
 const App = () => {
   const routes = [
     {
       path: '/app1',
-      component: <App1 />,
+      component: <Content />,
     },
     {
       path: '/app2',
-      component: <App2 />,
+      component: <Content />,
     }
   ];
   return (
