@@ -4,6 +4,6 @@ import ReactDOM from 'react-dom';
 import App from './App';
 
 export const render = () => {
-  ReactDOM.render(<App />, document.getElementById('root'))
+  ReactDOM.render(<App />, document.getElementById('main-app'))
 }
 render()
