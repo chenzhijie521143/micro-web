@@ -71,13 +71,12 @@ module.exports = {
   ],
   devServer: {
     port: 9000,
-    // host: '0.0.0.0',
+    host: '0.0.0.0',
     // headers: { 'Access-Control-Allow-Origin': '*' },
-    // disableHostCheck: true,
-    // historyApiFallback: true,
+    disableHostCheck: true,
+    historyApiFallback: true,
     // publicPath: '/'
     // contentBase: path.join(__dirname, 'dist'),
     // compress: true,
-    // historyApiFallback: true,
   }
 }
