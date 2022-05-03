@@ -4,7 +4,7 @@ import styles from './index.less';
 function App() {
   return (
     <div className={styles.app}>
-      app2
+      微应用-app2
     </div>
   );
 }

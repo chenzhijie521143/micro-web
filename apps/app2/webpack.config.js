@@ -7,11 +7,10 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, 'build'),
-    filename: 'app2',
+    filename: '[name].[hash:8].js',
     library: 'app2',
     libraryTarget: 'umd',
-    umdNamedDefine: true,
-    publicPath: '/'
+    publicPath: 'http://localhost:8001'
   },
   module: {
     rules: [
