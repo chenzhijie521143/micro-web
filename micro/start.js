@@ -1,13 +1,19 @@
 import { currentApp } from './util';
 import { setList, getList } from "./constants/subApps"
 import { rewriteRouter } from "./router/rewriteRouter"
+import { setMainLifecycle } from './constants/mainLifecycles';
 
 // 实现路由拦截
 rewriteRouter()
 
 // 注册子应用列表
-export const registerMicroApps = (appList) => {
+export const registerMicroApps = (appList, mainLifecycle) => {
+  
+  // 注册子应用
   setList(appList)
+
+  // 保留主应用的生命周期
+  setMainLifecycle(mainLifecycle)
 }
 
 export const start = async () => {
