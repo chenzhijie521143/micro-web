@@ -63,7 +63,6 @@ export const findAppByName = (name) => {
 
 export const filterApp = (key, rule) => {
   const currentApp = getList().filter(app => app[key] === rule);
-
   return currentApp.length ? currentApp[0] : false;
 };
 
