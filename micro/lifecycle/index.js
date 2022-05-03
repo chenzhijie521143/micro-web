@@ -1,4 +1,4 @@
-import { htmlLoader } from '../htmlLoader/htmlLoader';
+// import { htmlLoader } from '../htmlLoader/htmlLoader';
 import { findAppByRoute } from '../util';
 import { getMainLifecycle } from '../constants/mainLifecycles';
 
@@ -6,7 +6,6 @@ import { getMainLifecycle } from '../constants/mainLifecycles';
 export const lifecycle = async () => {
   const prevApp = findAppByRoute(window.__ORIGIN_APP__); // 获取上一个子应用
   const nextApp = findAppByRoute(window.__CURRENT_SUB_APP__); // 获取跳转后的子应用
-
   if (!nextApp) {
     return
   }
@@ -29,20 +28,20 @@ export const boostrap = async (app) => {
   await runMainLifeCycle('beforeLoad', app)
 
   // 获取子应用的dom结构
-  await htmlLoader(app);
-  app && await app.bootstrap();
+  // await htmlLoader(app);
+  // app && await app.bootstrap();
 }
 
 // 渲染应用
 export const mount = async (app) => {
-  app && await app.mount(app);
+  // app && await app.mount(app);
 
   await runMainLifeCycle('mounted', app)
 }
 
 // 卸载
 export const unmount = async (app) => {
-  app && app.unmount && await app.unmount(app);
+  // app && app.unmount && await app.unmount(app);
 
   await runMainLifeCycle('destoryed', app)
 }
