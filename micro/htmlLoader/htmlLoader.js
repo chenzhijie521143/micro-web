@@ -18,7 +18,6 @@ export const parseHtml = async (url, appName) => {
   const fetchedScript = await Promise.all(scriptUrls.map(url => fetchUrl(url)));
   scriptsArray = scripts.concat(fetchedScript);
   cache[appName] = [elements, scriptsArray];
-  console.log([elements, scriptsArray]);
   return [elements, scriptsArray];
 }
 
