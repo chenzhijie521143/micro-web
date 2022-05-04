@@ -4,7 +4,7 @@ import styles from './index.less';
 
 const App = () => {
   return (
-    <div className={styles.app}>
+    <div className={styles.wrap}>
       <div id={APP_CONTAINER} />
     </div>
   );

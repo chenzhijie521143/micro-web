@@ -26,7 +26,8 @@ module.exports = {
       {
         test: /\.less$/,
         use: [
-          'style-loader',
+          // 'style-loader',
+          MiniCssExtractPlugin.loader,
           {
             loader: 'css-loader',
             options: {
@@ -68,5 +69,6 @@ module.exports = {
     headers: { 'Access-Control-Allow-Origin': '*' },
     disableHostCheck: true,
     historyApiFallback: true,
-  }
+  },
+  devtool: 'inline-source-map',
 }

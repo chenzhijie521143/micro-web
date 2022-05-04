@@ -1,6 +1,6 @@
 import { ProxySandBox } from './proxySandBox';
 import { findAppByName } from '../util';
-import { performScriptForEval } from './performScript';
+import { performScript } from './performScript';
 
 // 检测是否漏掉了生命周期方法
 export const lackOfLifecycle = (lifecycles) => !lifecycles ||
@@ -20,7 +20,7 @@ export const sandbox = (script, appName) => {
   window.__MICRO_WEB__ = true;
 
   // 获取子应用生命周期
-  const lifeCycles = performScriptForEval(script, appName, global.proxy);
+  const lifeCycles = performScript(script, appName, global.proxy);
 
   app.sandBox = global;
 
