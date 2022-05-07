@@ -27,7 +27,6 @@ track
 public/.DS_Store
 package-lock.json
 mock/.DS_Store
-yarn.lock
 *.log
 coverage
 out/
