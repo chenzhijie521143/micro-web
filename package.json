@@ -5,7 +5,9 @@
   "scripts": {
     "dev": "npm run start",
     "start": "webpack-dev-server --mode=development --hot",
-    "build": "rm -rf build && npm i && webpack --mode=production --progress "
+    "build": "rm -rf build && npm i && webpack --mode=production --progress ",
+    "startall": "node ./build/init.js && node ./build/run.js",
+    "startall-f": "node ./build/init.js -f && node ./build/run.js"
   },
   "dependencies": {
     "react": "^17.0.2",

@@ -30,4 +30,3 @@ mock/.DS_Store
 *.log
 coverage
 out/
-build
