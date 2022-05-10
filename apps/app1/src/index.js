@@ -15,8 +15,9 @@ export async function bootstrap() {
   console.log('app1 bootstrap')
 }
 
-export async function mount(app) {
-  console.log('app1 mount')
+export async function mount({ userInfo }) {
+  window.$eventBus.emit('test', { title: 'app1 mount' })
+  console.log('userInfo==', userInfo)
   render()
 }
 

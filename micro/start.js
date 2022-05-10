@@ -2,13 +2,20 @@ import { currentApp } from './util';
 import { setList, getList } from "./constants/subApps"
 import { rewriteRouter } from "./router/rewriteRouter"
 import { setMainLifecycle } from './constants/mainLifecycles';
+import { EventBus } from './eventBus';
+
+const eventBus = new EventBus();
+eventBus.on('test', (data) => {
+  console.log(data);
+})
+window.$eventBus = eventBus;
 
 // 实现路由拦截
 rewriteRouter()
 
 // 注册子应用列表
 export const registerMicroApps = (appList, mainLifecycle) => {
-  
+
   // 注册子应用
   setList(appList)
 
