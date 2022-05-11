@@ -22,8 +22,4 @@ export async function mount(app) {
 
 export async function unmount(ctx) {
   console.log('app2 unmout')
-  const { container } = ctx
-  if (container) {
-    document.getElementById(container).innerHTML = ''
-  }
 }

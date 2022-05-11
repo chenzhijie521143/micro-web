@@ -1,16 +1,20 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const packageName = 'app1';
 module.exports = {
   entry: {
     index: [path.resolve(__dirname, './src/index.js')],
   },
   output: {
-    path: path.resolve(__dirname, 'build'),
-    filename: '[name].[hash:8].js',
-    library: 'app1',
+    // path: path.resolve(__dirname, 'build'),
+    // filename: '[name].[hash:8].js',
+    // library: 'app1',
+    // libraryTarget: 'umd',
+    // publicPath: 'http://localhost:8000'
+    library: `${packageName}-[name]`,
     libraryTarget: 'umd',
-    publicPath: 'http://localhost:8000'
+    jsonpFunction: `webpackJsonp_${packageName}`,
   },
   module: {
     rules: [

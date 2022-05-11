@@ -15,16 +15,11 @@ export async function bootstrap() {
   console.log('app1 bootstrap')
 }
 
-export async function mount({ userInfo }) {
-  window.$eventBus.emit('test', { title: 'app1 mount' })
-  console.log('userInfo==', userInfo)
+export async function mount(app) {
+  console.log('app1 mount')
   render()
 }
 
 export async function unmount(ctx) {
   console.log('app1 unmout')
-  const { container } = ctx
-  if (container) {
-    document.getElementById(container).innerHTML = ''
-  }
 }
