@@ -1,4 +1,19 @@
-import { registerMicroApps, start } from "../../micro"
+import { registerMicroApps, start, creatStore } from "../../micro"
+
+const store = creatStore({
+  a: 1,
+})
+const storeData = store.getStore()
+store.subscribeStore((newValue, oldValue) => {
+  console.log('=====', newValue, oldValue)
+})
+store.updateStore({
+  ...storeData,
+  b: 2
+}).then((res) => {
+  console.log('=====', res)
+})
+
 export const registerApp = (list) => {
   registerMicroApps(list,
     { // 生命周期
