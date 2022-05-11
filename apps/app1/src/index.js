@@ -6,8 +6,7 @@ import App from './App';
 export const render = () => {
   ReactDOM.render(<App />, document.getElementById('root'))
 }
-
-if (!window.__MICRO_WEB__) {
+if (!window.__POWERED_BY_QIANKUN__) {
   render()
 }
 
@@ -17,6 +16,7 @@ export async function bootstrap() {
 
 export async function mount(app) {
   console.log('app1 mount')
+  console.log("window.__POWERED_BY_QIANKUN__", window.__POWERED_BY_QIANKUN__)
   render()
 }
 
